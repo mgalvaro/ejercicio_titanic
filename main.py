@@ -87,9 +87,11 @@ def main():
                    horizontal = True,
                    )
     
-    df = preprocesado(sex, age, pclass, fare, embarked)
-
-    st.dataframe(df)
+    
+    boton = st.button(label='Show DF', key='Submit')
+    if boton:
+        df = preprocesado(sex, age, pclass, fare, embarked)
+        st.dataframe(df)
 
 if __name__ == "__main__":
     main()
